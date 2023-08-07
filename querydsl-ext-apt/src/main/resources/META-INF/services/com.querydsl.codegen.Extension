@@ -1,7 +1,1 @@
-com.pallasathenagroup.querydsl.RangeSupport
-com.pallasathenagroup.querydsl.ArraySupport
-com.pallasathenagroup.querydsl.DurationSupport
-com.pallasathenagroup.querydsl.PeriodSupport
-com.pallasathenagroup.querydsl.YearMonthSupport
-com.pallasathenagroup.querydsl.MonetaryAmountSupport
 com.pallasathenagroup.querydsl.JsonNodeSupport

@@ -1,0 +1,39 @@
+[versions]
+querydsl = "5.0.0"
+#hibernate = "5.6.15.Final"
+hibernate = "6.2.5.Final"
+hypersistence = "3.5.0"
+guava = "30.0-jre"
+jackson = "2.15.2"
+money = "1.1"
+
+[libraries]
+javax-money = { module = "javax.money:money-api", version.ref = "money" }
+
+hibernate-core = { module = "org.hibernate:hibernate-core", version.ref = "hibernate" }
+hibernate-testing = { module = "org.hibernate:hibernate-testing", version.ref = "hibernate" }
+hypersistence = { module = "io.hypersistence:hypersistence-utils-hibernate-62", version.ref = "hypersistence" }
+
+# QueryDSL
+querydsl-core = { module = "com.querydsl:querydsl-core", version.ref = "querydsl" }
+querydsl-jpa = { module = "com.querydsl:querydsl-jpa", version.ref = "querydsl" }
+querydsl-apt = { module = "com.querydsl:querydsl-apt", version.ref = "querydsl" }
+
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+
+# Jackson
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+
+postgresql = "org.postgresql:postgresql:42.2.9"
+
+[bundles]
+querydsl = ["querydsl-core", "querydsl-apt", "querydsl-jpa"]
+#kotlin = ["kotlin", "kotlin-reflect"]
+#log4j = ["log4j-core", "log4j-slf4j-impl"]
+#jackson = ["jackson-databind", "jackson-kotlin-module"]
+#feign = ["feign-core", "feign-slf4j", "feign-jackson"]
+#feign-jaxb = ["jaxb-api", "jaxb-runtime"]
+#slack = ["slack-api-client", "slack-api-model-kotlin-ext", "slack-api-client-kotlin-ext"]
+
+
+[plugins]

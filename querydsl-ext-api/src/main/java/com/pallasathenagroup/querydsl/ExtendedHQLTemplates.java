@@ -1,11 +1,8 @@
 package com.pallasathenagroup.querydsl;
 
 import com.pallasathenagroup.querydsl.array.ArrayOps;
-import com.pallasathenagroup.querydsl.duration.DurationOps;
 import com.pallasathenagroup.querydsl.hstore.HstoreOps;
 import com.pallasathenagroup.querydsl.json.JsonOps;
-import com.pallasathenagroup.querydsl.period.PeriodOps;
-import com.pallasathenagroup.querydsl.range.RangeOps;
 import com.pallasathenagroup.querydsl.yearmonth.YearMonthOps;
 import com.querydsl.jpa.HQLTemplates;
 
@@ -18,18 +15,6 @@ public class ExtendedHQLTemplates extends HQLTemplates {
     }
 
     public static void registerTemplates(ExtendedHQLTemplates templates) {
-        templates.add(RangeOps.OVERLAPS, "RANGE_OVERLAPS({0}, {1}) = TRUE");
-        templates.add(RangeOps.CONTAINS, "RANGE_CONTAINS({0}, {1}) = TRUE");
-        templates.add(RangeOps.IS_CONTAINED_BY, "RANGE_IS_CONTAINED_BY({0}, {1}) = TRUE");
-        templates.add(RangeOps.STRICTLY_LEFT_OF, "RANGE_STRICTLY_LEFT_OF({0}, {1}) = TRUE");
-        templates.add(RangeOps.STRICTLY_RIGHT_OF, "RANGE_STRICTLY_RIGHT_OF({0}, {1}) = TRUE");
-        templates.add(RangeOps.ADJACENT_TO, "RANGE_ADJACENT_TO({0}, {1}) = TRUE");
-        templates.add(RangeOps.UNION, "RANGE_UNION({0}, {1})");
-        templates.add(RangeOps.INTERSECTION, "RANGE_INTERSECTION({0}, {1})");
-        templates.add(RangeOps.DIFFERENCE, "RANGE_DIFFERENCE({0}, {1})");
-        templates.add(RangeOps.LOWER_BOUND, "RANGE_LOWER_BOUND({0})");
-        templates.add(RangeOps.UPPER_BOUND, "RANGE_UPPER_BOUND({0})");
-
         templates.add(ArrayOps.OVERLAPS, "ARRAY_OVERLAPS({0}, {1}) = TRUE");
         templates.add(ArrayOps.CONTAINS, "ARRAY_CONTAINS({0}, {1}) = TRUE");
         templates.add(ArrayOps.CONTAINS_ELEMENT, "ARRAY_CONTAINS_ELEMENT({0}, {1}) = TRUE");
@@ -45,26 +30,6 @@ public class ExtendedHQLTemplates extends HQLTemplates {
         templates.add(ArrayOps.UNNEST, "ARRAY_UNNEST({0})");
         templates.add(ArrayOps.ELEMENT_AT, "ARRAY_ELEMENT_AT({0}, {1})");
         templates.add(ArrayOps.ARRAY_AGG, "ARRAY_AGG({0})");
-
-        templates.add(DurationOps.BETWEEN, "DURATION_BETWEEN({0}, {1})");
-        templates.add(DurationOps.ADD, "DURATION_ADD({0}, {1})");
-        templates.add(DurationOps.SUBTRACT, "DURATION_SUBTRACT({0}, {1})");
-        templates.add(DurationOps.MULTIPLY, "DURATION_MULTIPLY({0}, {1})");
-        templates.add(DurationOps.DIVIDE, "DURATION_DIVIDE({0}, {1})");
-        templates.add(DurationOps.AVG, "DURATION_AVG({0})");
-        templates.add(DurationOps.MAX, "DURATION_MAX({0})");
-        templates.add(DurationOps.MIN, "DURATION_MIN({0})");
-        templates.add(DurationOps.SUM, "DURATION_SUM({0})");
-
-        templates.add(PeriodOps.BETWEEN, "PERIOD_BETWEEN({0}, {1})");
-        templates.add(PeriodOps.ADD, "PERIOD_ADD({0}, {1})");
-        templates.add(PeriodOps.SUBTRACT, "PERIOD_SUBTRACT({0}, {1})");
-        templates.add(PeriodOps.MULTIPLY, "PERIOD_MULTIPLY({0}, {1})");
-        templates.add(PeriodOps.DIVIDE, "PERIOD_DIVIDE({0}, {1})");
-        templates.add(PeriodOps.AVG, "PERIOD_AVG({0})");
-        templates.add(PeriodOps.MAX, "PERIOD_MAX({0})");
-        templates.add(PeriodOps.MIN, "PERIOD_MIN({0})");
-        templates.add(PeriodOps.SUM, "PERIOD_SUM({0})");
 
         templates.add(JsonOps.CONTAINS_KEY, "JSON_CONTAINS_KEY({0}, {1}) = TRUE");
         templates.add(JsonOps.GET, "JSON_GET({0}, {1})");

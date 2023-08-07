@@ -33,7 +33,7 @@ public class RangeEntity {
     @Id
     Long id;
 
-    @Type(type = "range")
+    @Type(PostgreSQLRangeType.class)
     Range<LocalDateTime> localDateTimeRange;
 
 }

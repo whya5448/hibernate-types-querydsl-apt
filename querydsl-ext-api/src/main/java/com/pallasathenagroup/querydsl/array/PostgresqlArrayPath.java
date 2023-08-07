@@ -1,13 +1,9 @@
 package com.pallasathenagroup.querydsl.array;
 
-import com.querydsl.core.types.ExpressionUtils;
-import com.querydsl.core.types.Path;
-import com.querydsl.core.types.PathImpl;
-import com.querydsl.core.types.PathMetadata;
-import com.querydsl.core.types.PathMetadataFactory;
+import com.querydsl.core.types.*;
 import com.querydsl.core.types.dsl.EntityPathBase;
+import jakarta.persistence.Column;
 
-import javax.persistence.Column;
 import java.lang.reflect.AnnotatedElement;
 
 public class PostgresqlArrayPath<A, T> extends PostgresqlArrayExpression<A, T> implements Path<A> {

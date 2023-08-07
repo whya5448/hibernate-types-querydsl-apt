@@ -1,7 +1,0 @@
-com.pallasathenagroup.querydsl.RangeFunctionInitializer
-com.pallasathenagroup.querydsl.ArrayFunctionInitializer
-com.pallasathenagroup.querydsl.DurationFunctionInitializer
-com.pallasathenagroup.querydsl.PeriodFunctionInitializer
-com.pallasathenagroup.querydsl.YearMonthFunctionInitializer
-com.pallasathenagroup.querydsl.JsonFunctionInitializer
-com.pallasathenagroup.querydsl.HstoreFunctionInitializer
